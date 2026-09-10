@@ -1,0 +1,198 @@
+import { MapPin, BedDouble, Maximize2, ArrowRight } from "lucide-react";
+import xonadonlar from "../../../assets/hauses-img/xonadonlar.jpg"
+import hovliUy from "../../../assets/hauses-img/hovliUy.jpg"
+import Kvartiralar from "../../../assets/hauses-img/kvartira.webp"
+import uchaskalar from '../../../assets/hauses-img/uchaskalar.jpg'
+function Houses() {
+  return (
+    <>
+      <div id="houses" className="Houses bg-[#0a1522]">
+        <div className="container_1200 py-20 px-4 lg:px-0">
+          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-4">
+            <div>
+              <div className="flex items-center gap-3">
+                <div className="w-10 h-1 rounded-2xl bg-amber-500"></div>
+                <h3 className="text-1xl text-[#d4a94a]">Uy turlari</h3>
+              </div>
+              <h2 className="text-2xl sm:text-3xl mt-5 font-bold text-white">
+                Bizning eng yaxshi takliflarimiz
+              </h2>
+              <p className="text-gray-400 py-4">
+                Siz uchun eng qulay va ishonchli uy-joylar. Har bir mijoz o'z
+                orzusidagi uyni topishi uchun.
+              </p>
+            </div>
+            <button className="flex items-center gap-2 rounded-full px-6 py-3 font-medium text-sm border border-gray-600 text-white hover:border-[#d4a94a] hover:text-[#d4a94a] transition-colors w-fit">
+              Barcha uylar
+              <ArrowRight size={16} />
+            </button>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+            <div className="bg-[#101f34] rounded-2xl overflow-hidden  hover:-translate-y-1 transition-all duration-300">
+              <div className="relative h-44">
+                <img
+                  src={xonadonlar}
+                  alt="Xonadonlar"
+                  className="w-full h-full object-cover"
+                />
+                <span className="absolute top-3 left-3 bg-[#d4a94a] text-[#0a1522] text-xs font-medium px-3 py-1 rounded-full">
+                  Sotuvda
+                </span>
+                <span className="absolute top-3 right-3 bg-white/90 text-[#0a1522] text-xs font-medium px-3 py-1 rounded-full">
+                  Yangi
+                </span>
+              </div>
+              <div className="p-5">
+                <p className="font-semibold text-white text-base mb-2">
+                  Xonadonlar
+                </p>
+                <div className="flex items-center gap-1 text-gray-400 text-xs mb-3">
+                  <MapPin size={14} className="text-[#d4a94a]" />
+                  Farg'ona sh., A. Navoiy ko'ch. 64
+                </div>
+                <div className="flex items-center gap-4 text-gray-400 text-xs mb-4">
+                  <span className="flex items-center gap-1">
+                    <BedDouble size={14} className="text-[#d4a94a]" />
+                    3 xona
+                  </span>
+                  <span className="flex items-center gap-1">
+                    <Maximize2 size={14} className="text-[#d4a94a]" />
+                    75 m²
+                  </span>
+                </div>
+                <div className="flex items-center justify-between">
+                  <p className="text-white font-semibold">$ 55 000</p>
+                  <span className="flex items-center justify-center w-9 h-9 rounded-full bg-[#faf3e2]">
+                    <ArrowRight size={16} className="text-[#d4a94a]" />
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-[#101f34] rounded-2xl overflow-hidden hover:-translate-y-1 transition-all duration-300 ">
+              <div className="relative h-44">
+                <img
+                  src={hovliUy}
+                  alt="Hovli uylar"
+                  className="w-full h-full object-cover"
+                />
+                <span className="absolute top-3 left-3 bg-[#d4a94a] text-[#0a1522] text-xs font-medium px-3 py-1 rounded-full">
+                  Sotuvda
+                </span>
+                <span className="absolute top-3 right-3 bg-white/90 text-[#0a1522] text-xs font-medium px-3 py-1 rounded-full">
+                  Ommabop
+                </span>
+              </div>
+              <div className="p-5">
+                <p className="font-semibold text-white text-base mb-2">
+                  Hovli uylar
+                </p>
+                <div className="flex items-center gap-1 text-gray-400 text-xs mb-3">
+                  <MapPin size={14} className="text-[#d4a94a]" />
+                  Farg'ona viloyati
+                </div>
+                <div className="flex items-center gap-4 text-gray-400 text-xs mb-4">
+                  <span className="flex items-center gap-1">
+                    <BedDouble size={14} className="text-[#d4a94a]" />
+                    5 xona
+                  </span>
+                  <span className="flex items-center gap-1">
+                    <Maximize2 size={14} className="text-[#d4a94a]" />
+                    180 m²
+                  </span>
+                </div>
+                <div className="flex items-center justify-between">
+                  <p className="text-white font-semibold">$ 120 000</p>
+                  <span className="flex items-center justify-center w-9 h-9 rounded-full bg-[#faf3e2]">
+                    <ArrowRight size={16} className="text-[#d4a94a]" />
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-[#101f34] rounded-2xl overflow-hidden  hover:-translate-y-1 transition-all duration-300">
+              <div className="relative h-44">
+                <img
+                  src={Kvartiralar}
+                  alt="Kvartiralar"
+                  className="w-full h-full object-cover"
+                />
+                <span className="absolute top-3 left-3 bg-[#d4a94a] text-[#0a1522] text-xs font-medium px-3 py-1 rounded-full">
+                  Sotuvda
+                </span>
+                <span className="absolute top-3 right-3 bg-white/90 text-[#0a1522] text-xs font-medium px-3 py-1 rounded-full">
+                  Chegirma
+                </span>
+              </div>
+              <div className="p-5">
+                <p className="font-semibold text-white text-base mb-2">
+                  Kvartiralar
+                </p>
+                <div className="flex items-center gap-1 text-gray-400 text-xs mb-3">
+                  <MapPin size={14} className="text-[#d4a94a]" />
+                  Shahar markazi
+                </div>
+                <div className="flex items-center gap-4 text-gray-400 text-xs mb-4">
+                  <span className="flex items-center gap-1">
+                    <BedDouble size={14} className="text-[#d4a94a]" />
+                    2 xona
+                  </span>
+                  <span className="flex items-center gap-1">
+                    <Maximize2 size={14} className="text-[#d4a94a]" />
+                    60 m²
+                  </span>
+                </div>
+                <div className="flex items-center justify-between">
+                  <p className="text-white font-semibold">$ 75 000</p>
+                  <span className="flex items-center justify-center w-9 h-9 rounded-full bg-[#faf3e2]">
+                    <ArrowRight size={16} className="text-[#d4a94a]" />
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-[#101f34] rounded-2xl overflow-hidden hover:-translate-y-1 transition-all duration-300 ">
+              <div className="relative h-44">
+                <img
+                  src={uchaskalar}
+                  alt="Yer uchastkalari"
+                  className="w-full h-full object-cover"
+                />
+                <span className="absolute top-3 left-3 bg-[#d4a94a] text-[#0a1522] text-xs font-medium px-3 py-1 rounded-full">
+                  Sotuvda
+                </span>
+                <span className="absolute top-3 right-3 bg-white/90 text-[#0a1522] text-xs font-medium px-3 py-1 rounded-full">
+                  Yangi
+                </span>
+              </div>
+              <div className="p-5">
+                <p className="font-semibold text-white text-base mb-2">
+                  Yer uchastkalari
+                </p>
+                <div className="flex items-center gap-1 text-gray-400 text-xs mb-3">
+                  <MapPin size={14} className="text-[#d4a94a]" />
+                  Farg'ona viloyati
+                </div>
+                <div className="flex items-center gap-4 text-gray-400 text-xs mb-4">
+                  <span className="flex items-center gap-1">
+                    <BedDouble size={14} className="text-[#d4a94a]" />
+                    10 sotix
+                  </span>
+                </div>
+                <div className="flex items-center justify-between">
+                  <p className="text-white font-semibold">$ 25 000</p>
+                  <span className="flex items-center justify-center w-9 h-9 rounded-full bg-[#faf3e2]">
+                    <ArrowRight size={16} className="text-[#d4a94a]" />
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+}
+
+export default Houses;
