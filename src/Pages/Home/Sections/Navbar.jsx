@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import { Building2, Phone, Send, Menu, X } from "lucide-react";
-
+import { Phone, Send, Menu, X } from "lucide-react";
+import logo from '../../../assets/logo/LOGOO.png'
 const LINKS = [
   { id: "hero", label: "Bosh sahifa" },
   { id: "about", label: "Biz haqimizda" },
@@ -31,18 +31,13 @@ function Navbar() {
   }, []);
 
   return (
-    <header className="sticky top-0 z-50 w-full bg-blue-950 backdrop-blur-sm">
+    <header className="sticky top-0 z-50 w-full bg-white/95 backdrop-blur-sm shadow-sm">
       <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
         <div className="flex items-center gap-3">
-          <Building2 size={45} strokeWidth={1} className="text-[#d4a94a]" />
-          <div className="leading-tight">
-            <p className="text-white text-xl font-semibold tracking-wide">
-              ZIYNAT
-            </p>
-            <p className="text-[10px] tracking-[0.25em] text-[#d4a94a]">
-              UY JOY SAVDO
-            </p>
+          <div className="">
+          <img src={logo} alt="" className="w-40 object-cover" />
           </div>
+          
         </div>
 
         <nav className="hidden lg:flex items-center gap-8">
@@ -53,7 +48,7 @@ function Navbar() {
               className={`text-sm pb-1 transition-colors ${
                 active === link.id
                   ? "text-[#d4a94a] border-b-2 border-[#d4a94a]"
-                  : "text-gray-200 hover:text-[#d4a94a]"
+                  : "text-black hover:text-[#d4a94a]"
               }`}
             >
               {link.label}
@@ -64,9 +59,9 @@ function Navbar() {
         <div className="hidden lg:flex items-center gap-6">
           <a
             href="tel:+998883676666"
-            className="flex items-center gap-2 text-white text-sm"
+            className="flex items-center gap-2 text-black text-sm"
           >
-            <Phone size={16} className="text-[#d4a94a]" />
+            <Phone size={20 } className="text-[#d4a94a]" />
             +998 88 367 66 66
           </a>
           <a
@@ -80,7 +75,7 @@ function Navbar() {
 
         <button
           onClick={() => setMenuOpen(true)}
-          className="lg:hidden flex items-center justify-center w-10 h-10 text-white"
+          className="lg:hidden flex items-center justify-center w-10 h-10 text-black"
           aria-label="Menyu"
         >
           <Menu size={26} />
@@ -98,7 +93,7 @@ function Navbar() {
           >
             <div className="flex items-center justify-between px-5 py-4 border-b border-white/10">
               <div className="flex items-center gap-3">
-                <Building2 size={30} strokeWidth={1} className="text-[#d4a94a]" />
+                <img src={logo} alt="" className="w-9 h-9 rounded-full object-cover" />
                 <div className="leading-tight">
                   <p className="text-white text-base font-semibold tracking-wide">
                     ZIYNAT

@@ -50,17 +50,17 @@ function Services() {
                 variants={fadeUp}
                 className="text-center"
               >
-                <span className="flex items-center justify-center w-14 h-14 rounded-full bg-[#faf3e2] mb-4 mx-auto">
+                <span className="flex items-center justify-center w-14 h-14 rounded-full bg-[#ed585d] mb-4 mx-auto">
                   <MessageCircleQuestion
                     size={24}
                     strokeWidth={1.5}
-                    className="text-[#d4a94a]"
+                    className="text-[#fffcf5]"
                   />
                 </span>
                 <p className="font-semibold text-[#0a1522] text-sm mb-1">
                   Uy tanlashda maslahat
                 </p>
-                <p className="text-xs text-gray-400 leading-relaxed">
+                <p className="text-xs text-gray-500 leading-relaxed">
                   Sizning ehtiyojingizga
                   <br />
                   mos variantlar
@@ -75,17 +75,17 @@ function Services() {
                 variants={fadeUp}
                 className="text-center"
               >
-                <span className="flex items-center justify-center w-14 h-14 rounded-full bg-[#faf3e2] mb-4 mx-auto">
+                <span className="flex items-center justify-center w-14 h-14 rounded-full bg-[#eb5e63] mb-4 mx-auto">
                   <Scale
                     size={24}
                     strokeWidth={1.5}
-                    className="text-[#d4a94a]"
+                    className="text-[#fffcf5]"
                   />
                 </span>
                 <p className="font-semibold text-[#0a1522] text-sm mb-1">
                   Huquqiy yordam
                 </p>
-                <p className="text-xs text-gray-400 leading-relaxed">
+                <p className="text-xs text-gray-500 leading-relaxed">
                   Bitimni qonuniy va
                   <br />
                   xavfsiz qilish
@@ -100,17 +100,17 @@ function Services() {
                 variants={fadeUp}
                 className="text-center"
               >
-                <span className="flex items-center justify-center w-14 h-14 rounded-full bg-[#faf3e2] mb-4 mx-auto">
+                <span className="flex items-center justify-center w-14 h-14 rounded-full bg-[#ec5d62] mb-4 mx-auto">
                   <ClipboardList
                     size={24}
                     strokeWidth={1.5}
-                    className="text-[#d4a94a]"
+                    className="text-[#fffcf5]"
                   />
                 </span>
                 <p className="font-semibold text-[#0a1522] text-sm mb-1">
                   Hujjatlar bilan ishlash
                 </p>
-                <p className="text-xs text-gray-400 leading-relaxed">
+                <p className="text-xs text-gray-500 leading-relaxed">
                   Barcha rasmiy
                   <br />
                   jarayonlar
@@ -125,17 +125,17 @@ function Services() {
                 variants={fadeUp}
                 className="text-center"
               >
-                <span className="flex items-center justify-center w-14 h-14 rounded-full bg-[#faf3e2] mb-4 mx-auto">
+                <span className="flex items-center justify-center w-14 h-14 rounded-full bg-[#f24e53]/100 mb-4 mx-auto">
                   <Landmark
                     size={24}
                     strokeWidth={1.5}
-                    className="text-[#d4a94a]"
+                    className="text-[#fffcf5]"
                   />
                 </span>
                 <p className="font-semibold text-[#0a1522] text-sm mb-1">
                   Bank kreditlari
                 </p>
-                <p className="text-xs text-gray-400 leading-relaxed">
+                <p className="text-xs text-gray-500 leading-relaxed">
                   Bitimdan keyin ham
                   <br />
                   biz bilan

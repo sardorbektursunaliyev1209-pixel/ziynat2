@@ -1,40 +1,44 @@
 import { useState } from "react";
 import { Search, Play, X } from "lucide-react";
-import heroBg from "../../../assets/hero-bg/img.jpg";
-import video from "../../../assets/Video/kampaniya haqida video.mp4"
+import video from "../../../assets/Video/ziynat_vd.mp4";
+import heroBg from "../../../assets/hero-bg/heroo.png";
 export default function Hero() {
   const [videoOpen, setVideoOpen] = useState(false);
-
   return (
     <div
       id="hero"
-      className="hero bg-cover bg-center bg-no-repeat"
-      style={{ backgroundImage: `url(${heroBg})` }}
+      className="hero bg-[#FAF7F1] overflow-hidden"
+      style={{
+        backgroundImage: `url(${heroBg})`,
+        backgroundRepeat: "no-repeat",
+        backgroundSize: "cover",
+        backgroundPosition: "center right",
+      }}
     >
-      <div className="container_1200">
-        <section className="relative w-full min-h-[520px] sm:min-h-[600px] lg:h-[680px] py-16 sm:py-0">
-          <div className="absolute" />
+      <div className="container_1200 px-6 lg:px-0">
+        <section className="relative flex flex-col lg:flex-row  w-full min-h-[520px] sm:min-h-[600px] lg:h-[680px] py-16 lg:py-0 gap-10 lg:gap-0">
+          <div className="absolute right-0 top-1/2 -translate-y-1/2 w-[420px] h-[420px] lg:w-[600px] lg:h-[600px] rounded-full bg-gradient-to-br from-[#faf3e2] to-[#f5e6c8] -z-10" />
 
-          <div className="relative max-w-7xl mx-auto h-full flex items-center px-4 sm:px-6">
+          <div className="relative flex items-center order-2 lg:order-1">
             <div className="max-w-xl">
-              <p className="text-sm sm:text-base lg:text-lg mb-3 sm:mb-4 text-gray-300 tracking-wide">
+              <p className="text-sm sm:text-base lg:text-lg mb-3 sm:mb-4 text-gray-500 tracking-wide">
                 Sizning orzudagi uy — biz bilan!
               </p>
 
-              <h1 className="text-white font-bold leading-[1.05] text-4xl sm:text-5xl lg:text-7xl">
-                ZIYNAT
+              <h1 className="font-serif text-black leading-[0.95] text-4xl sm:text-5xl lg:text-7xl">
+                Ziynat
               </h1>
-              <h2 className="font-bold leading-[1.05] text-4xl sm:text-5xl lg:text-7xl mb-5 sm:mb-8 text-[#d4a94a]">
-                UY-JOY SAVDO
+              <h2 className="font-serif leading-[0.95] text-4xl sm:text-5xl lg:text-7xl mb-5 sm:mb-8 text-[#d4a94a]">
+                Uy-joy savdo
               </h2>
 
-              <p className="text-sm sm:text-base lg:text-lg mb-7 sm:mb-10 max-w-md text-gray-300 leading-relaxed">
-                Sizning ishonchli hamkoringiz. Eng yaxshi uylar, qulay shartlar, professional
-                yondashuv!
+              <p className="text-sm sm:text-base lg:text-lg mb-7 sm:mb-10 max-w-md text-gray-500 leading-relaxed">
+                Siz uchun turli xil uy-joylar, xonadonlar va ko'chmas mulk
+                e'lonlarini bir joyga jamladik!
               </p>
 
               <div className="flex flex-col sm:flex-row sm:flex-wrap items-start sm:items-center gap-5 sm:gap-8">
-                <button className="w-full sm:w-auto flex items-center justify-center gap-2 rounded-full px-6 sm:px-8 py-3 sm:py-4 font-semibold text-sm sm:text-base bg-[#d4a94a] text-[#0a1522] hover:bg-[#e6bd5e] transition-colors">
+                <button className="w-full sm:w-auto flex items-center justify-center gap-2 rounded-full px-6 sm:px-8 py-3 sm:py-4 font-semibold text-sm sm:text-base bg-[#d4a94a] text-[#0a1522] hover:bg-[#e6bd5e] transition-colors shadow-lg shadow-[#d4a94a]/25">
                   <Search size={18} />
                   Uylarni ko'rish
                 </button>
@@ -43,12 +47,14 @@ export default function Hero() {
                   onClick={() => setVideoOpen(true)}
                   className="flex items-center gap-3 text-white text-sm cursor-pointer group"
                 >
-                  <span className="flex items-center justify-center rounded-full w-11 h-11 sm:w-12 sm:h-12 border border-[#d4a94a] group-hover:bg-[#d4a94a]/10 transition-colors">
-                    <Play size={16} className="text-[#d4a94a]" fill="#d4a94a" />
+                  <span className="flex items-center justify-center rounded-full w-11 h-11 sm:w-12 sm:h-12 border-[1px] border-[#eea404] group-hover:bg-[#d4a94a]/10 transition-colors">
+                    <Play size={20} className="text-[#b78822]" fill="#d4a94a" />
                   </span>
                   <span className="leading-tight text-left">
-                    <span className="block text-sm sm:text-base font-medium">Kompaniya haqida</span>
-                    <span className="block text-xs text-gray-400">video</span>
+                    <span className="block text-sm sm:text-base text-black font-medium">
+                      Kompaniya haqida
+                    </span>
+                    <span className="block text-xs text-gray-600">video</span>
                   </span>
                 </button>
               </div>
@@ -57,7 +63,6 @@ export default function Hero() {
         </section>
       </div>
 
-      {/* Video modal */}
       {videoOpen && (
         <div
           className="fixed inset-0 z-[100] flex items-center justify-center bg-black/80 px-3 sm:px-4"

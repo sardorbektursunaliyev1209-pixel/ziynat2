@@ -6,23 +6,23 @@ import uchaskalar from '../../../assets/hauses-img/uchaskalar.jpg'
 function Houses() {
   return (
     <>
-      <div id="houses" className="Houses bg-[#0a1522]">
+      <div id="houses" className="Houses bg-white">
         <div className="container_1200 py-20 px-4 lg:px-0">
           <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-4">
             <div>
               <div className="flex items-center gap-3">
                 <div className="w-10 h-1 rounded-2xl bg-amber-500"></div>
-                <h3 className="text-1xl text-[#d4a94a]">Uy turlari</h3>
+                <h3 className="text-2xl text-[#d79912]">Uy turlari</h3>
               </div>
-              <h2 className="text-2xl sm:text-3xl mt-5 font-bold text-white">
+              <h2 className="text-2xl sm:text-3xl mt-5 font-bold text-black">
                 Bizning eng yaxshi takliflarimiz
               </h2>
-              <p className="text-gray-400 py-4">
-                Siz uchun eng qulay va ishonchli uy-joylar. Har bir mijoz o'z
+              <p className="text-gray-500 py-4">
+                Siz uchun eng qulay va ishonchli uy-joylar. <br />  Har bir mijoz o'z
                 orzusidagi uyni topishi uchun.
               </p>
             </div>
-            <button className="flex items-center gap-2 rounded-full px-6 py-3 font-medium text-sm border border-gray-600 text-white hover:border-[#d4a94a] hover:text-[#d4a94a] transition-colors w-fit">
+            <button className="flex items-center gap-2 rounded-full px-6 py-3 font-medium text-sm border border-gray-600 text-black      hover:border-[#d4a94a] hover:text-red-600 transition-colors w-fit">
               Barcha uylar
               <ArrowRight size={16} />
             </button>
@@ -47,9 +47,11 @@ function Houses() {
                 <p className="font-semibold text-white text-base mb-2">
                   Xonadonlar
                 </p>
-                <div className="flex items-center gap-1 text-gray-400 text-xs mb-3">
-                  <MapPin size={14} className="text-[#d4a94a]" />
-                  Farg'ona sh., A. Navoiy ko'ch. 64
+                <div className="flex items-start gap-1 text-gray-400 text-xs mb-3">
+                  <MapPin size={14} className="text-[#d4a94a] mt-0.5 shrink-0" />
+                  <span>
+                    <span className="text-gray-500">Manzil:</span> Farg'ona sh., A. Navoiy ko'ch. 64
+                  </span>
                 </div>
                 <div className="flex items-center gap-4 text-gray-400 text-xs mb-4">
                   <span className="flex items-center gap-1">
@@ -62,7 +64,9 @@ function Houses() {
                   </span>
                 </div>
                 <div className="flex items-center justify-between">
-                  <p className="text-white font-semibold">$ 55 000</p>
+                  <p className="text-white font-semibold">
+                    <span className="text-gray-500 font-normal text-xs">Narx:</span> $ 55 000
+                  </p>
                   <span className="flex items-center justify-center w-9 h-9 rounded-full bg-[#faf3e2]">
                     <ArrowRight size={16} className="text-[#d4a94a]" />
                   </span>
@@ -88,9 +92,11 @@ function Houses() {
                 <p className="font-semibold text-white text-base mb-2">
                   Hovli uylar
                 </p>
-                <div className="flex items-center gap-1 text-gray-400 text-xs mb-3">
-                  <MapPin size={14} className="text-[#d4a94a]" />
-                  Farg'ona viloyati
+                <div className="flex items-start gap-1 text-gray-400 text-xs mb-3">
+                  <MapPin size={14} className="text-[#d4a94a] mt-0.5 shrink-0" />
+                  <span>
+                    <span className="text-gray-500">Manzil:</span> Farg'ona viloyati
+                  </span>
                 </div>
                 <div className="flex items-center gap-4 text-gray-400 text-xs mb-4">
                   <span className="flex items-center gap-1">
@@ -103,7 +109,9 @@ function Houses() {
                   </span>
                 </div>
                 <div className="flex items-center justify-between">
-                  <p className="text-white font-semibold">$ 120 000</p>
+                  <p className="text-white font-semibold">
+                    <span className="text-gray-500 font-normal text-xs">Narx:</span> $ 120 000
+                  </p>
                   <span className="flex items-center justify-center w-9 h-9 rounded-full bg-[#faf3e2]">
                     <ArrowRight size={16} className="text-[#d4a94a]" />
                   </span>
@@ -129,9 +137,11 @@ function Houses() {
                 <p className="font-semibold text-white text-base mb-2">
                   Kvartiralar
                 </p>
-                <div className="flex items-center gap-1 text-gray-400 text-xs mb-3">
-                  <MapPin size={14} className="text-[#d4a94a]" />
-                  Shahar markazi
+                <div className="flex items-start gap-1 text-gray-400 text-xs mb-3">
+                  <MapPin size={14} className="text-[#d4a94a] mt-0.5 shrink-0" />
+                  <span>
+                    <span className="text-gray-500">Manzil:</span> Shahar markazi
+                  </span>
                 </div>
                 <div className="flex items-center gap-4 text-gray-400 text-xs mb-4">
                   <span className="flex items-center gap-1">
@@ -144,7 +154,9 @@ function Houses() {
                   </span>
                 </div>
                 <div className="flex items-center justify-between">
-                  <p className="text-white font-semibold">$ 75 000</p>
+                  <p className="text-white font-semibold">
+                    <span className="text-gray-500 font-normal text-xs">Narx:</span> $ 75 000
+                  </p>
                   <span className="flex items-center justify-center w-9 h-9 rounded-full bg-[#faf3e2]">
                     <ArrowRight size={16} className="text-[#d4a94a]" />
                   </span>
@@ -170,9 +182,11 @@ function Houses() {
                 <p className="font-semibold text-white text-base mb-2">
                   Yer uchastkalari
                 </p>
-                <div className="flex items-center gap-1 text-gray-400 text-xs mb-3">
-                  <MapPin size={14} className="text-[#d4a94a]" />
-                  Farg'ona viloyati
+                <div className="flex items-start gap-1 text-gray-400 text-xs mb-3">
+                  <MapPin size={14} className="text-[#d4a94a] mt-0.5 shrink-0" />
+                  <span>
+                    <span className="text-gray-500">Manzil:</span> Farg'ona viloyati
+                  </span>
                 </div>
                 <div className="flex items-center gap-4 text-gray-400 text-xs mb-4">
                   <span className="flex items-center gap-1">
@@ -181,7 +195,9 @@ function Houses() {
                   </span>
                 </div>
                 <div className="flex items-center justify-between">
-                  <p className="text-white font-semibold">$ 25 000</p>
+                  <p className="text-white font-semibold">
+                    <span className="text-gray-500 font-normal text-xs">Narx:</span> $ 25 000
+                  </p>
                   <span className="flex items-center justify-center w-9 h-9 rounded-full bg-[#faf3e2]">
                     <ArrowRight size={16} className="text-[#d4a94a]" />
                   </span>
