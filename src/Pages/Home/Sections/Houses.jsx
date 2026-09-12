@@ -1,8 +1,6 @@
+import { Link } from "react-router-dom";
 import { MapPin, BedDouble, Maximize2, ArrowRight } from "lucide-react";
-import xonadonlar from "../../../assets/hauses-img/xonadonlar.jpg"
-import hovliUy from "../../../assets/hauses-img/hovliUy.jpg"
-import Kvartiralar from "../../../assets/hauses-img/kvartira.webp"
-import uchaskalar from '../../../assets/hauses-img/uchaskalar.jpg'
+import { houses } from '../../data/hauses'
 function Houses() {
   return (
     <>
@@ -18,8 +16,8 @@ function Houses() {
                 Bizning eng yaxshi takliflarimiz
               </h2>
               <p className="text-gray-500 py-4">
-                Siz uchun eng qulay va ishonchli uy-joylar. <br />  Har bir mijoz o'z
-                orzusidagi uyni topishi uchun.
+                Siz uchun eng qulay va ishonchli uy-joylar. <br /> Har bir mijoz
+                o'z orzusidagi uyni topishi uchun.
               </p>
             </div>
             <button className="flex items-center gap-2 rounded-full px-6 py-3 font-medium text-sm border border-gray-600 text-black      hover:border-[#d4a94a] hover:text-red-600 transition-colors w-fit">
@@ -29,181 +27,64 @@ function Houses() {
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
-            <div className="bg-[#101f34] rounded-2xl overflow-hidden  hover:-translate-y-1 transition-all duration-300">
+
+            {
+              houses.map((item)=>(
+
+            <Link to={`/uy/${item.id}`} key={item.id} className="bg-[#101f34] rounded-2xl overflow-hidden  hover:-translate-y-1 transition-all duration-300">
               <div className="relative h-44">
                 <img
-                  src={xonadonlar}
-                  alt="Xonadonlar"
+                  src={item.image}
+                  alt={item.title}
                   className="w-full h-full object-cover"
                 />
                 <span className="absolute top-3 left-3 bg-[#d4a94a] text-[#0a1522] text-xs font-medium px-3 py-1 rounded-full">
-                  Sotuvda
+                  {
+                    item.status
+                  }
                 </span>
                 <span className="absolute top-3 right-3 bg-white/90 text-[#0a1522] text-xs font-medium px-3 py-1 rounded-full">
-                  Yangi
+                  {item.tag}
                 </span>
               </div>
               <div className="p-5">
                 <p className="font-semibold text-white text-base mb-2">
-                  Xonadonlar
+                  {item.title}
                 </p>
                 <div className="flex items-start gap-1 text-gray-400 text-xs mb-3">
-                  <MapPin size={14} className="text-[#d4a94a] mt-0.5 shrink-0" />
+                  <MapPin
+                    size={14}
+                    className="text-[#d4a94a] mt-0.5 shrink-0"
+                  />
                   <span>
-                    <span className="text-gray-500">Manzil:</span> Farg'ona sh., A. Navoiy ko'ch. 64
+                    <span className="text-gray-500">Manzil:</span> {item.location}
                   </span>
                 </div>
                 <div className="flex items-center gap-4 text-gray-400 text-xs mb-4">
                   <span className="flex items-center gap-1">
                     <BedDouble size={14} className="text-[#d4a94a]" />
-                    3 xona
+                    {item.rooms}
                   </span>
                   <span className="flex items-center gap-1">
                     <Maximize2 size={14} className="text-[#d4a94a]" />
-                    75 m²
+                    {item.area}
                   </span>
                 </div>
                 <div className="flex items-center justify-between">
                   <p className="text-white font-semibold">
-                    <span className="text-gray-500 font-normal text-xs">Narx:</span> $ 55 000
+                    <span className="text-gray-500 font-normal text-xs">
+                      Narx:
+                    </span>{" "}
+                    {item.price}
                   </p>
                   <span className="flex items-center justify-center w-9 h-9 rounded-full bg-[#faf3e2]">
                     <ArrowRight size={16} className="text-[#d4a94a]" />
                   </span>
                 </div>
               </div>
-            </div>
-
-            <div className="bg-[#101f34] rounded-2xl overflow-hidden hover:-translate-y-1 transition-all duration-300 ">
-              <div className="relative h-44">
-                <img
-                  src={hovliUy}
-                  alt="Hovli uylar"
-                  className="w-full h-full object-cover"
-                />
-                <span className="absolute top-3 left-3 bg-[#d4a94a] text-[#0a1522] text-xs font-medium px-3 py-1 rounded-full">
-                  Sotuvda
-                </span>
-                <span className="absolute top-3 right-3 bg-white/90 text-[#0a1522] text-xs font-medium px-3 py-1 rounded-full">
-                  Ommabop
-                </span>
-              </div>
-              <div className="p-5">
-                <p className="font-semibold text-white text-base mb-2">
-                  Hovli uylar
-                </p>
-                <div className="flex items-start gap-1 text-gray-400 text-xs mb-3">
-                  <MapPin size={14} className="text-[#d4a94a] mt-0.5 shrink-0" />
-                  <span>
-                    <span className="text-gray-500">Manzil:</span> Farg'ona viloyati
-                  </span>
-                </div>
-                <div className="flex items-center gap-4 text-gray-400 text-xs mb-4">
-                  <span className="flex items-center gap-1">
-                    <BedDouble size={14} className="text-[#d4a94a]" />
-                    5 xona
-                  </span>
-                  <span className="flex items-center gap-1">
-                    <Maximize2 size={14} className="text-[#d4a94a]" />
-                    180 m²
-                  </span>
-                </div>
-                <div className="flex items-center justify-between">
-                  <p className="text-white font-semibold">
-                    <span className="text-gray-500 font-normal text-xs">Narx:</span> $ 120 000
-                  </p>
-                  <span className="flex items-center justify-center w-9 h-9 rounded-full bg-[#faf3e2]">
-                    <ArrowRight size={16} className="text-[#d4a94a]" />
-                  </span>
-                </div>
-              </div>
-            </div>
-
-            <div className="bg-[#101f34] rounded-2xl overflow-hidden  hover:-translate-y-1 transition-all duration-300">
-              <div className="relative h-44">
-                <img
-                  src={Kvartiralar}
-                  alt="Kvartiralar"
-                  className="w-full h-full object-cover"
-                />
-                <span className="absolute top-3 left-3 bg-[#d4a94a] text-[#0a1522] text-xs font-medium px-3 py-1 rounded-full">
-                  Sotuvda
-                </span>
-                <span className="absolute top-3 right-3 bg-white/90 text-[#0a1522] text-xs font-medium px-3 py-1 rounded-full">
-                  Chegirma
-                </span>
-              </div>
-              <div className="p-5">
-                <p className="font-semibold text-white text-base mb-2">
-                  Kvartiralar
-                </p>
-                <div className="flex items-start gap-1 text-gray-400 text-xs mb-3">
-                  <MapPin size={14} className="text-[#d4a94a] mt-0.5 shrink-0" />
-                  <span>
-                    <span className="text-gray-500">Manzil:</span> Shahar markazi
-                  </span>
-                </div>
-                <div className="flex items-center gap-4 text-gray-400 text-xs mb-4">
-                  <span className="flex items-center gap-1">
-                    <BedDouble size={14} className="text-[#d4a94a]" />
-                    2 xona
-                  </span>
-                  <span className="flex items-center gap-1">
-                    <Maximize2 size={14} className="text-[#d4a94a]" />
-                    60 m²
-                  </span>
-                </div>
-                <div className="flex items-center justify-between">
-                  <p className="text-white font-semibold">
-                    <span className="text-gray-500 font-normal text-xs">Narx:</span> $ 75 000
-                  </p>
-                  <span className="flex items-center justify-center w-9 h-9 rounded-full bg-[#faf3e2]">
-                    <ArrowRight size={16} className="text-[#d4a94a]" />
-                  </span>
-                </div>
-              </div>
-            </div>
-
-            <div className="bg-[#101f34] rounded-2xl overflow-hidden hover:-translate-y-1 transition-all duration-300 ">
-              <div className="relative h-44">
-                <img
-                  src={uchaskalar}
-                  alt="Yer uchastkalari"
-                  className="w-full h-full object-cover"
-                />
-                <span className="absolute top-3 left-3 bg-[#d4a94a] text-[#0a1522] text-xs font-medium px-3 py-1 rounded-full">
-                  Sotuvda
-                </span>
-                <span className="absolute top-3 right-3 bg-white/90 text-[#0a1522] text-xs font-medium px-3 py-1 rounded-full">
-                  Yangi
-                </span>
-              </div>
-              <div className="p-5">
-                <p className="font-semibold text-white text-base mb-2">
-                  Yer uchastkalari
-                </p>
-                <div className="flex items-start gap-1 text-gray-400 text-xs mb-3">
-                  <MapPin size={14} className="text-[#d4a94a] mt-0.5 shrink-0" />
-                  <span>
-                    <span className="text-gray-500">Manzil:</span> Farg'ona viloyati
-                  </span>
-                </div>
-                <div className="flex items-center gap-4 text-gray-400 text-xs mb-4">
-                  <span className="flex items-center gap-1">
-                    <BedDouble size={14} className="text-[#d4a94a]" />
-                    10 sotix
-                  </span>
-                </div>
-                <div className="flex items-center justify-between">
-                  <p className="text-white font-semibold">
-                    <span className="text-gray-500 font-normal text-xs">Narx:</span> $ 25 000
-                  </p>
-                  <span className="flex items-center justify-center w-9 h-9 rounded-full bg-[#faf3e2]">
-                    <ArrowRight size={16} className="text-[#d4a94a]" />
-                  </span>
-                </div>
-              </div>
-            </div>
+            </Link>
+              ))
+            }
           </div>
         </div>
       </div>
