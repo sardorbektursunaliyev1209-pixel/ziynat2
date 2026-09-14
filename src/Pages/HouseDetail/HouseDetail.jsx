@@ -9,6 +9,8 @@ import {
   Send,
 } from "lucide-react";
 import { houses } from "../data/hauses";
+import Navbar from "../Home/Sections/Navbar";
+import Footer from "../Home/Sections/Footer";
 
 function HouseDetail() {
   const { id } = useParams();
@@ -31,6 +33,7 @@ function HouseDetail() {
 
   return (
     <div className="bg-white min-h-screen">
+      <Navbar/>
       <div className="container_1200 py-10 px-4 lg:px-0">
         <Link
           to="/"
@@ -231,6 +234,7 @@ function HouseDetail() {
           </div>
         </div>
       </div>
+      <Footer/>
     </div>
   );
 }
